@@ -1,0 +1,19 @@
+{
+	"editor.tabSize": 2,
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"vue",
+		"typescript",
+		"typescriptreact"
+	],
+	"eslint.format.enable": true,
+	"prettier.requireConfig": true,
+	// 保存时使用VSCode 自身格式化程序格式化
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		// 保存时用eslint格式化
+		"source.fixAll.eslint": true,
+		"source.organizeImports": true //自动剔除无效引用
+	}
+}
