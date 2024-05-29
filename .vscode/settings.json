@@ -12,8 +12,7 @@
 	// 保存时使用VSCode 自身格式化程序格式化
 	"editor.formatOnSave": true,
 	"editor.codeActionsOnSave": {
-		// 保存时用eslint格式化
-		"source.fixAll.eslint": true,
-		"source.organizeImports": true //自动剔除无效引用
+		"source.fixAll.eslint": "explicit",
+		"source.organizeImports": "explicit"
 	}
 }
