@@ -36,5 +36,6 @@ function updateCode(fileAST: any) {
 	);
 	writeFile(`${getCurDir()}/src/test/demo-update.js`, output.code);
 }
-let ast = parseCode(code);
-updateCode(ast);
+// let ast = parseCode(code);
+// updateCode(ast);
+
