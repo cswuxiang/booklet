@@ -1,7 +1,9 @@
 {
   "scripts": {
     "dev": "esno ./src/index.ts",
-    "i18n": "esno ./src/i18n/index.ts"
+    "ast": "esno ./src/ast/index.ts",
+    "i18n": "esno ./src/i18n/index.ts",
+    "test": "esno ./src/test/index.ts"
   },
   "devDependencies": {
     "@babel/core": "^7.24.6",
@@ -19,6 +21,7 @@
     "fs-extra": "^11.2.0",
     "glob": "^10.4.1",
     "lint-staged": "^8.1.7",
+    "loadsh": "^0.0.4",
     "sha1": "^1.1.1",
     "typescript": "^4.0.3"
   },

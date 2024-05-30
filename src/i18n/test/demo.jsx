@@ -8,7 +8,7 @@ export function aa() {
 }
 
 export function bb() {
-	return <Trans><div className="asdfasf">中华人xs名共和国<p style="{{ color:'red'}" > 你43们好啊</p></div></Trans>
+	return <Trans><p>另外，<code>i18next-scanner</code> 还有一个很大的缺陷，它只能通过 <code>function</code> 和 <code>attr</code> 来标识提取的内容</p></Trans>
 }
 
 /**
