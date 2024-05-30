@@ -9,6 +9,7 @@
     "@babel/core": "^7.24.6",
     "@babel/parser": "^7.24.6",
     "@babel/plugin-transform-typescript": "^7.24.6",
+    "@babel/preset-react": "^7.24.6",
     "@babel/traverse": "^7.24.6",
     "@tencent/eslint-config-tencent": "^1.0.0-beta.5",
     "@types/babel__core": "^7.20.5",

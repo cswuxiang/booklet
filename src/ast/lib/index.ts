@@ -1,12 +1,12 @@
-import { parse } from "@babel/core";
 import generate from "@babel/generator";
+import { parse } from "@babel/parser";
 import traverse from "@babel/traverse";
 import { writeFile } from "src/utils";
 export function parseCode(code: string) {
 	// 解析代码
 	let result = parse(code, {
 		sourceType: 'module',
-		plugins: ['@babel/plugin-transform-typescript']
+		plugins: ['jsx', 'typescript']
 	});
 	return result;
 }
@@ -20,6 +20,22 @@ export function updateCode(fileAST: any, filePath) {
 			) {
 				path.node.source.value = "ttt-update";
 			}
+
+			if (
+				path.node.type === "JSXElement" &&
+				path.node.openingElement.name.type === 'JSXIdentifier' && path.node.openingElement.name.name === 'abc'
+			) {
+				path.node.openingElement.name.name = "ttt-update";
+			}
+
+			if (
+				path.node.type === "JSXElement" &&
+				path.node.closingElement.name.type === 'JSXIdentifier' && path.node.closingElement.name.name === 'abc'
+			) {
+				path.node.closingElement.name.name = "ttt-update";
+			}
+
+
 		}
 	});
 
