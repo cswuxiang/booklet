@@ -1,3 +1,5 @@
+
+//https://github.com/babel/babel/blob/master/packages/babel-traverse/test/replacement.js
 import generate from "@babel/generator";
 import { parse } from "@babel/parser";
 import traverse from "@babel/traverse";
@@ -36,6 +38,10 @@ export function updateCode(fileAST: any, filePath) {
 			}
 
 
+		},
+		FunctionDeclaration(path) {
+
+			console.log(333)
 		}
 	});
 
