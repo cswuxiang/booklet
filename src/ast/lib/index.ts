@@ -3,6 +3,7 @@
 import generate from "@babel/generator";
 import { parse } from "@babel/parser";
 import traverse from "@babel/traverse";
+import * as t from "@babel/types";
 import { writeFile } from "src/utils";
 export function parseCode(code: string) {
 	// 解析代码
@@ -15,7 +16,11 @@ export function parseCode(code: string) {
 export function updateCode(fileAST: any, filePath) {
 	traverse(fileAST, {
 		enter(path) {
-			console.log(path.node.type)
+			if (t.is('ImportDeclaration', path.node, {
+
+			})) {
+				console.log("----", path.container);
+			}
 			if (
 				path.node.type === "ImportDeclaration" &&
 				path.node.source.value === "@typescript-eslint/parser"
@@ -38,10 +43,6 @@ export function updateCode(fileAST: any, filePath) {
 			}
 
 
-		},
-		FunctionDeclaration(path) {
-
-			console.log(333)
 		}
 	});
 
