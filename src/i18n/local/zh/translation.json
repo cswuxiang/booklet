@@ -1,0 +1,8 @@
+{
+  "腾讯云": "",
+  "你已选择{{count}}个可操作的账号_0": "",
+  "88f4c71ebda35cf77f87aa55c0c2be8753973d8b": "",
+  "2983ab3d396e8a8454c6ae5deb46add7ded942f6_0": "",
+  "da39a3ee5e6b4b0d3255bfef95601890afd80709": "<0>另外，<1>i18next-scanner</1> 还有一个很大的缺陷，它只能通过 <3>function</3> 和 <5>attr</5> 来标识提取的内容</0>",
+  "da39a3ee5e6b4b0d3255bfef95601890afd80709_0": "您好，{{username}}，你xxxx有 {{count}} 条未读消息"
+}

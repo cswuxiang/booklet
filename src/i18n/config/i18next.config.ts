@@ -1,14 +1,12 @@
 
-import sha1 from 'sha1';
+
+import { transform } from "./transeform";
 export default {
 	func: {
 		list: ['i18next.t', 'i18n.t'],
-		extensions: ['.js', '.jsx']
+		extensions: ['.js', '.jsx'],
 	},
 	trans: {
-		fallbackKey: (ns, value) => {
-			return sha1(value); // return a sha1 as the key
-		},
 		component: 'Trans',
 		defaultsKey: 'defaults',
 		extensions: ['.js', '.jsx'],
@@ -19,12 +17,14 @@ export default {
 			// Check out https://github.com/acornjs/acorn/tree/master/acorn#interface for additional options
 		}
 	},
+
 	lngs: ['zh', 'en'], // supported languages
 	resource: {
 		// the source path is relative to current working directory
 		loadPath: '',
 
 		// the destination path is relative to your `gulp.dest()` path
-		savePath: './{{lng}}/{{ns}}.json'
-	}
+		savePath: './{{lng}}/{{ns}}.json',
+	},
+	transform: transform
 }
