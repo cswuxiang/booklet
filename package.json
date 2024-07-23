@@ -27,6 +27,7 @@
     "typescript": "^4.0.3"
   },
   "dependencies": {
+    "html-parse-stringify2": "^2.0.1",
     "i18next-scanner": "^4.4.0",
     "vinyl-fs": "^4.0.0"
   }
